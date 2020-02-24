@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <title>Konversi suhu</title>
+        <!--load bootstrap css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- load jquery and bootstrap js-->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript">
+        
+            celciusfahrenheit= () => {
+                let celcius = document.getElementById('Suhu').value;
+                let hasil = (celcius * (9 / 5)) + 32;
+                document.getElementById('hasil').value = hasil;
+            }
+            celciuskelvin=() => {
+                let celcius = document.getElementById('Suhu').value;
+                let hasil = (celcius *1) + 273;
+                document.getElementById('hasil').value = hasil;
+            }
+            celciusreamur=() => {
+                let celcius = document.getElementById('Suhu').value;
+                let hasil = (celcius * (4 / 5));
+                document.getElementById('hasil').value = hasil;
+            }
+            fahrenheitcelcius=() => {
+                let fahrenheit = document.getElementById('p').value;
+                let hasil = (fahrenheit-32) * (5/9);
+                document.getElementById('fah').value = hasil;
+            }
+            fahrenheitreamur=() => {
+                let fahrenheit = document.getElementById('p').value;
+                let hasil = (fahrenheit - 32) * (4/9);
+                document.getElementById('fah').value = hasil;
+            }
+            fahrenheitkelvin=() => {
+                let fahrenheit = document.getElementById('p').value;
+                let hasil = ((fahrenheit - 32) * (5/9) + 273);
+                document.getElementById('fah').value = hasil;
+            } 
+            reamurcelcius=() => {
+                let reamur = document.getElementById('reamur').value;
+                let hasil = (reamur - 32) * (4/9);
+                document.getElementById('r').value = hasil;
+            }
+            reamurfahrenheit=() => {
+                let reamur = document.getElementById('reamur').value;
+                let hasil = (reamur-32) * (5/9);
+                document.getElementById('r').value = hasil;
+            }
+            reamurkelvin=() => {
+                let reamur = document.getElementById('reamur').value;
+                let hasil = ((5/4) * reamur + 273);
+                document.getElementById('r').value = hasil;
+            }
+            kelvincelcius=() => {
+                let kelvin = document.getElementById('kel').value;
+                let hasil = kelvin - 273;
+                document.getElementById('vin').value = hasil;
+            }
+            kelvinfahrenheit=() => {
+                let kelvin = document.getElementById('kel').value;
+                let hasil = (9/5) * (kelvin - 273) + 32;
+                document.getElementById('vin').value = hasil;
+            }
+            kelvinreamur=() => {
+                let kelvin = document.getElementById('kel').value;
+                let hasil = (4/5) * (kelvin - 273);
+                document.getElementById('vin').value = hasil;
+            }
+        </script>
+    </head>
+    
+    <body>
+                <div class="container">
+                <div class="row">
+                <div class="card col-sm-4">
+                    <div class="card-header bg-warning text-black">
+                        <h3> konversi Suhu dari celcius gan!</h3>
+                    </div>
+                    <input type="number" id="Suhu" class="form-control" placeholder="inputkan suhu celcius">
+
+                    <button type="button" class="btn btn-dark btn-block" id="celciusfahrenheit" onclick="celciusfahrenheit()">
+                        Convert Celcius to Fahrenheit gan!
+                    </button>
+                    <button type="button" class="btn btn-primary btn-block" name="celciuskelvin" onclick="celciuskelvin()">
+                        Convert Celcius To Kelvin gan!
+                    </button>
+                    <button type="button" class="btn btn-danger btn-block" name="celciusreamur" onclick="celciusreamur()">
+                        Convert Celcius To Reamur gan!
+                    </button>
+                    <br>
+                    Hasil
+                    <input type="number" id="hasil" class="form-control" readonly>
+                    </div>
+                    </div>
+                    </div>
+                   
+                    
+                    <div class="container">
+                    <div class="row">
+                        <div class="card col-sm-4">
+                            <div class="card-header bg-danger text-white">
+                                <h3> konversi Suhu dari fahrenheit gan!</h3></div>
+                            <br>
+                            <input type="number" id="p" class="form-control" placeholder="inputkan suhu fahrenheit">
+                            <br>
+                        <button type="button" class="btn btn-warning btn-block" id="fahrenheitcelcius" onclick="fahrenheitcelcius()">
+                        Convert fahrenheit To celcius gan!
+                        </button>
+                        <button type="button" class="btn btn-warning btn-block" name="fahrenheitreamur" onclick="fahrenheitreamur()">
+                        Convert fahrenheit To Reamur gan!
+                        </button>
+                        <button type="button" class="btn btn-warning btn-block" name="fahrenheitkelvin" onclick="fahrenheitkelvin()">
+                        Convert fahrenheit To Kelvin gan!
+                        </button>
+                    <br>
+                    Hasil
+                    <input type="number" id="fah" class="form-control" readonly>
+                    </div>
+                    </div>
+                    </div>
+
+                        <div class="container">
+                        <div class="row">
+                        <div class="card col-sm-4">
+                            <div class="card-header bg-primary text-white">
+                                <h3> konversi Suhu dari kelvin gan!</h3></div>
+                            <br>
+                            <input type="number" id="kel" class="form-control" placeholder="inputkan suhu kelvin">
+                            <br>
+                        <button type="button" class="btn btn-warning btn-block" id="kelvincelcius" onclick="kelvincelcius()">
+                        Convert kelvin To celcius gan!
+                        </button>
+                        <button type="button" class="btn btn-warning btn-block" name="kelvinfahrenheit" onclick="kelvinfahrenheit()">
+                        Convert kelvin To fahrenheit gan!
+                        </button>
+                        <button type="button" class="btn btn-warning btn-block" name="kelvinreamur" onclick="kelvinreamur()">
+                        Convert kelvin To reamur gan!
+                        </button>
+                    <br>
+                    Hasil
+                    <input type="number" id="vin" class="form-control" readonly>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                        <div class="card col-sm-4">
+                            <div class="card-header bg-primary text-white">
+                                <h3> konversi Suhu dari reamur gan!</h3></div>
+                            <br>
+                            <input type="number" id="reamur" class="form-control" placeholder="inputkan suhu reamur">
+                            <br>
+                        <button type="button" class="btn btn-warning btn-block" id="reamurcelcius" onclick="reamurcelcius()">
+                        Convert reamur To celcius gan!
+                        </button>
+                        <button type="button" class="btn btn-warning btn-block" name="reamurfahrenheit" onclick="reamurfahrenheit()">
+                        Convert reamur To fahrenheit gan!
+                        </button>
+                        <button type="button" class="btn btn-warning btn-block" name="reamurkelvin" onclick="reamurkelvin()">
+                        Convert reamur To Kelvin gan!
+                        </button>
+                    <br>
+                    Hasil
+                    <input type="number" id="r" class="form-control" readonly>
+                    </div>
+                    </div>
+                    </div>
+
+
+            </br>
+            <copyright>Risa</copyright>
+    </body>
+    </html>
+    
